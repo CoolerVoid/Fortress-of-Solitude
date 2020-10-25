@@ -1,0 +1,16 @@
+$ cppcheck --enable=all lib/
+Checking lib/ice_vector.c...
+1/2 files checked 57% done
+Checking lib/mem_ops.c...
+2/2 files checked 100% done
+Checking usage of global functions..
+[lib/ice_vector.c:36]: (style) The function 'ice_vector_add' is never used.
+[lib/ice_vector.c:53]: (style) The function 'ice_vector_free' is never used.
+[lib/ice_vector.c:6]: (style) The function 'ice_vector_init' is never used.
+[lib/ice_vector.c:13]: (style) The function 'ice_vector_max' is never used.
+[lib/ice_vector.c:58]: (style) The function 'ice_vector_remove' is never used.
+[lib/ice_vector.c:45]: (style) The function 'ice_vector_view' is never used.
+[lib/ice_vector.c:30]: (style) The function 'ice_vector_write' is never used.
+[lib/mem_ops.c:38]: (style) The function 'ice_xmalloc_fatal' is never used.
+(information) Cppcheck cannot find all the include files (use --check-config for details)
+

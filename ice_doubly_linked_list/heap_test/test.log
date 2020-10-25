@@ -1,0 +1,53 @@
+==130422== Memcheck, a memory error detector
+==130422== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==130422== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==130422== Command: bin/test_doubly_linked
+==130422== 
+
+---Ice doubly linked list DEBUG-START ---
+
+ Mon Oct 12 16:00:19 2020 lib/ice_doubly_linked.c[120] fifo_dl_list_dbg(): 
+ 
+
+---Ice doubly linked list DEBUG-END ---
+0 2 4 6 8 10  
+
+---Ice doubly linked list DEBUG-START ---
+
+ Mon Oct 12 16:00:19 2020 lib/ice_doubly_linked.c[137] lifo_dl_list_dbg(): 
+ 
+
+---Ice doubly linked list DEBUG-END ---
+10 8 6 4 2 0  
+Delete position 8
+Label: hulk
+ var_name: green
+Label: spider
+ var_name: red
+Label: daredevil
+ var_name: red
+Label: wolverine
+ var_name: yellow
+Label: deadpool
+ var_name: dark red
+----------------------------
+Label: deadpool
+ var_name: dark red
+Label: wolverine
+ var_name: yellow
+Label: daredevil
+ var_name: red
+Label: spider
+ var_name: red
+Label: hulk
+ var_name: green
+==130422== 
+==130422== HEAP SUMMARY:
+==130422==     in use at exit: 0 bytes in 0 blocks
+==130422==   total heap usage: 33 allocs, 33 frees, 7,044 bytes allocated
+==130422== 
+==130422== All heap blocks were freed -- no leaks are possible
+==130422== 
+==130422== For counts of detected and suppressed errors, rerun with: -v
+==130422== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+

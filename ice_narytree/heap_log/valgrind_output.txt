@@ -1,0 +1,40 @@
+==63855== Memcheck, a memory error detector
+==63855== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==63855== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==63855== Command: ./bin/test_tree
+==63855== 
+
+Result found: 3 
+Label: attribute
+ var_name: x
+ Expression: x=0
+Line: 10
+ Label: attribute
+ var_name: z
+ Expression: z+=8
+Line: 14
+ Label: attribute
+ var_name: y
+ Expression: y+=2
+Line: 16
+ Label: attribute
+ var_name: x
+ Expression: x+=2
+Line: 11
+ Label: attribute
+ var_name: x
+ Expression: x+=8
+Line: 12
+ Label: attribute
+ var_name: z
+ Expression: z+=12
+Line: 15
+ ==63855== 
+==63855== HEAP SUMMARY:
+==63855==     in use at exit: 0 bytes in 0 blocks
+==63855==   total heap usage: 47 allocs, 47 frees, 10,399 bytes allocated
+==63855== 
+==63855== All heap blocks were freed -- no leaks are possible
+==63855== 
+==63855== For counts of detected and suppressed errors, rerun with: -v
+==63855== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
