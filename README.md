@@ -22,7 +22,7 @@ https://github.com/CoolerVoid/Fortress-of-Solitude/tree/main/ice_vector
 Notes
 --
 
-Please read README.md of each library to understnd how to use.
+Please read README.md of each library to understand how to use.
 If you have any doubts, send me e-mail or create a issue.
 
 All libraries of this repository don't have memory leaks, i tested each program with valgrind[1].
