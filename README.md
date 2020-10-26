@@ -19,6 +19,9 @@ https://github.com/CoolerVoid/Fortress-of-Solitude/tree/main/ice_stack
 - Dynamic vector library for C language.
 https://github.com/CoolerVoid/Fortress-of-Solitude/tree/main/ice_vector
 
+- Arit\_eval is a Arithmetic expression evaluator with anti-integer-overflow resources, use pseudo AST algorithm to solve...
+https://github.com/CoolerVoid/Fortress-of-Solitude/tree/main/arit_eval
+
 Notes
 --
 
