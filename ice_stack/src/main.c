@@ -1,3 +1,4 @@
+// simple example how you can use the library
 #include <stdio.h>
 #include <stdlib.h>
 #include "../lib/ice_stack.h"
@@ -12,9 +13,9 @@ typedef struct data data;
 
 void *form_data(char * label, int line)
 {
-	data *in=malloc(sizeof(data));
+	data *in=icestack_xmalloc(sizeof(data));
 
-	in->label = strdup(label);
+	in->label = strndup(label,strlen(label));
         in->line = line;
 
 	return (void *)in;

@@ -14,9 +14,9 @@ typedef struct data data;
 // your custom data here
 void *form_data(char * label, int line)
 {
-	data *in=malloc(sizeof(data));
+	data *in=ice_queue_xmalloc(sizeof(data));
 
-	in->label = strdup(label);
+	in->label = strndup(label,strlen(label));
         in->line = line;
 
 	return (void *)in;

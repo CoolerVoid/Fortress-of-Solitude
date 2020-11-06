@@ -1,3 +1,4 @@
+// simple example how you can use the library
 #include <stdio.h>
 #include <stdlib.h>
 #include "../lib/ice_doubly_linked.h"
@@ -14,10 +15,10 @@ typedef struct data data;
 // your custom function here for your data
 void *form_data(char * label, char *varname)
 {
-	data *in=malloc(sizeof(data));
+	data *in=ice_dl_xmalloc(sizeof(data));
 
-	in->label = strdup(label);
-	in->var_name = strdup(varname);
+	in->label = strndup(label,strlen(label));
+	in->var_name = strndup(varname,strlen(varname));
 
 	return (void *)in;
 }

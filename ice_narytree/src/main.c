@@ -1,3 +1,4 @@
+// example how you can use the lib
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -22,11 +23,11 @@ typedef struct data data;
 
 void *form_data(bool taint, char * label, char *exp, char *varname, int line)
 {
-	data *in=malloc(sizeof(data));
+	data *in=icetree_xmalloc(sizeof(data));
 
-	in->label = strdup(label);
-	in->var_name = strdup(varname);
-        in->exp = strdup (exp);
+	in->label = strndup(label,strlen(label));
+	in->var_name = strndup(varname,strlen(varname));
+        in->exp = strndup (exp,strlen(exp));
         in->line = line;
         in->taint = taint;
 
