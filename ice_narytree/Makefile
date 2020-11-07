@@ -2,7 +2,7 @@ export MALLOC_MMAP_THRESHOLD_=1
 export MALLOC_CHECK_=1
 export MALLOC_PERTURB_=1
 CC=gcc
-CFLAGS=-Wall -Wextra -O2 -fstack-protector-all 
+CFLAGS=-Wall -Wextra -O2  -mmitigate-rop -fstack-protector-all -pie -fPIE -ftrapv 
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Darwin)
 	LDFLAGS=-Wl
